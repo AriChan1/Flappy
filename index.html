@@ -54,17 +54,17 @@
         // Game constants
         const BOARD_WIDTH = 360;
         const BOARD_HEIGHT = 640;
-        const GRAVITY = 0.5;
-        const JUMP_STRENGTH = -9;
-        const PIPE_SPEED = -4;
-        const PIPE_SPAWN_INTERVAL = 1500;
+        const GRAVITY = 0.4;  // Reduced gravity - bird falls slower
+        const JUMP_STRENGTH = -6.5;  // Reduced jump - bird doesn't fly too high
+        const PIPE_SPEED = -3;  // Slower pipes - more time to react
+        const PIPE_SPAWN_INTERVAL = 2000;  // Pipes appear less frequently
 
         // Bird properties
         let bird = {
             x: BOARD_WIDTH / 8,
             y: BOARD_HEIGHT / 2,
-            width: 60,
-            height: 60,
+            width: 50,  // Slightly smaller bird
+            height: 50,
             velocityY: 0
         };
 
@@ -72,7 +72,7 @@
         let pipes = [];
         const PIPE_WIDTH = 64;
         const PIPE_HEIGHT = 512;
-        const PIPE_GAP = 160;
+        const PIPE_GAP = 220;  // MUCH BIGGER GAP - easier to fly through!
 
         // Game state
         let gameOver = false;
